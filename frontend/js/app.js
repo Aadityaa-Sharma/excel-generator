@@ -265,7 +265,7 @@
 
     function startPolling() {
         if (state.pollInterval) clearInterval(state.pollInterval);
-        state.pollInterval = setInterval(pollJobStatus, 1000);
+        state.pollInterval = setInterval(pollJobStatus, 2000);
     }
 
     function stopPolling() {

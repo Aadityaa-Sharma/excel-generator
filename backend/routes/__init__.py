@@ -426,6 +426,8 @@ def _process_job(job_id: str) -> None:
         job["started_at"] = time.time()
 
     proc = _ensure_processor()
+    
+    from backend.parsers import ParserFactory
     parser_factory = ParserFactory(
         ocr_manager=proc["ocr_manager"],
         preprocessor=proc["preprocessor"],
@@ -451,7 +453,6 @@ def _process_job(job_id: str) -> None:
             logger.info(f"Processing file {idx + 1}/{len(files)}: {file_info['filename']}")
 
             # Parse document
-            from backend.parsers import ParserFactory as PF
             result = parser_factory.parse(file_info["path"], password=password)
             result.file_hash = file_info["hash"]
             result.file_size = file_info["size"]

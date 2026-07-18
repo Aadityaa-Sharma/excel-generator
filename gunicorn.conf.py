@@ -27,9 +27,9 @@ accesslog = "-"
 errorlog = "-"
 loglevel = os.environ.get("LOG_LEVEL", "info").lower()
 
-# Memory management
-max_requests = 100
-max_requests_jitter = 20
+# Memory management (disabled max_requests to preserve in-memory job state)
+# max_requests = 100
+# max_requests_jitter = 20
 
 # Worker recycling to prevent memory leaks
 worker_tmp_dir = "/dev/shm"  # Use shared memory for faster worker heartbeat
