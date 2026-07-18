@@ -64,7 +64,7 @@ class Config:
     ARCHIVE_EXTENSIONS: set = {"zip"}
 
     # --- OCR ---
-    OCR_ENGINE_PRIORITY: list = os.environ.get("OCR_ENGINE_PRIORITY", "easyocr").split(",")
+    OCR_ENGINE_PRIORITY: list = os.environ.get("OCR_ENGINE_PRIORITY", "tesseract").split(",")
     OCR_CONFIDENCE_THRESHOLD: float = float(os.environ.get("OCR_CONFIDENCE_THRESHOLD", "0.6"))
     OCR_LANGUAGES: list = os.environ.get("OCR_LANGUAGES", "en").split(",")
     OCR_DPI: int = int(os.environ.get("OCR_DPI", "300"))

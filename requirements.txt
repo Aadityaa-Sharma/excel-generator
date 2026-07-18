@@ -27,8 +27,8 @@ numpy==2.2.3
 # Tesseract Python wrapper (requires system tesseract)
 pytesseract==0.3.13
 
-# EasyOCR — Pure Python fallback (Works on Render without apt-get)
-easyocr==1.7.2
+# EasyOCR — Too heavy for 512MB RAM
+# easyocr==1.7.2
 
 # ── Document Parsing ──────────────────────────────────────
 python-docx==1.1.2
