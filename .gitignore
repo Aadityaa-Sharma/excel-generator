@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.Python
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# Virtual Environment
+venv/
+env/
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Logs
+logs/*.log
+*.log
+
+# Temp files
+temp/
+tmp/
+uploads/
+outputs/
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OCR models cache
+~/.paddleocr/
+~/.EasyOCR/

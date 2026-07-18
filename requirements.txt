@@ -1,0 +1,46 @@
+# ═══════════════════════════════════════════════════════════════
+# Universal Document to Excel Converter — Python Dependencies
+# Full Capabilities Enabled (Supports all OCR & Document types)
+# ═══════════════════════════════════════════════════════════════
+
+# ── Core Framework ──────────────────────────────────────────
+Flask==3.1.1
+gunicorn==23.0.0
+
+# ── Excel Generation ───────────────────────────────────────
+openpyxl==3.1.5
+
+# ── PDF Processing ─────────────────────────────────────────
+pdfplumber==0.11.4
+PyMuPDF==1.25.3
+
+# ── Image Processing ──────────────────────────────────────
+opencv-python-headless==4.10.0.84
+Pillow==11.1.0
+numpy==2.2.3
+
+# ── OCR Engines (Full Capabilities) ────────────────────────
+# PaddleOCR — Best accuracy (Too heavy for Render Free Tier 512MB limit)
+# paddlepaddle==2.6.2
+# paddleocr==2.9.1
+
+# Tesseract Python wrapper (requires system tesseract)
+pytesseract==0.3.13
+
+# EasyOCR — Good fallback (Too heavy for Render Free Tier 512MB limit)
+# easyocr==1.7.2
+
+# ── Document Parsing ──────────────────────────────────────
+python-docx==1.1.2
+python-pptx==1.0.2
+
+# ── Data Formats ──────────────────────────────────────────
+# pandas and odfpy for ODS support
+pandas==2.2.3
+odfpy==1.4.1
+
+# ── Email Parsing ─────────────────────────────────────────
+extract-msg==0.52.0
+
+# ── HEIC Support ──────────────────────────────────────────
+pillow-heif==0.20.0

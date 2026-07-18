@@ -1,0 +1,29 @@
+# Render deployment configuration
+# https://render.com/docs/yaml-spec
+
+services:
+  - type: web
+    name: docexcel
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-eng || true
+    startCommand: gunicorn app:app --config gunicorn.conf.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: LOG_LEVEL
+        value: INFO
+      - key: OCR_ENGINE_PRIORITY
+        value: tesseract
+      - key: OCR_CONFIDENCE_THRESHOLD
+        value: "0.6"
+      - key: MAX_CONTENT_LENGTH
+        value: "104857600"
+      - key: MAX_WORKERS
+        value: "2"
+    healthCheckPath: /api/health
+    autoDeploy: true
