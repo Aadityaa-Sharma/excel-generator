@@ -8,7 +8,6 @@ services:
     plan: free
     buildCommand: |
       pip install -r requirements.txt
-      apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-eng || true
     startCommand: gunicorn app:app --config gunicorn.conf.py
     envVars:
       - key: PYTHON_VERSION
@@ -18,7 +17,7 @@ services:
       - key: LOG_LEVEL
         value: INFO
       - key: OCR_ENGINE_PRIORITY
-        value: tesseract
+        value: easyocr
       - key: OCR_CONFIDENCE_THRESHOLD
         value: "0.6"
       - key: MAX_CONTENT_LENGTH
